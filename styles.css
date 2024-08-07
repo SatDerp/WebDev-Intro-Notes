@@ -1,0 +1,114 @@
+/* CSS syntax: [selector] {property:value;} 
+    where the selector points to the HTML element you want to style
+    The declaration block contains one or more declarations separated by semicolons.
+    each declaration includes a CSS property name and a value separated by a colon.
+    There are different types of CSS selectors: 
+        The CSS element selctor: selects HTML element based on the element name. Eg: p {color: red;}
+        The CSS id selector: uses the id attribute of an HTML element to select a specific element. Write a '#' before id name Eg: #para1 {color: red;}
+            this will select the element with the specific id of para1
+        The CSS class selector: selects HTML element with a specific class attribute. Write a '.' before class name. Eg: .center {color:red;} 
+            this will select elements with class="center"
+        You can also specify that only specific HTML elements should be affected by a class. Eg: p.center{color:red;}
+            this will only apply to <p> element with class="center"
+        The CSS Universal selector: (*) selects all HTML element on the page. Eg: * {color:blue;}
+        The CSS Grouping Selector: perform selector on multiple elements to apply same styling. Eg: h1, h2, p {color: red;}
+*/
+
+/*
+    CSS display property is used to specify how an element is shown on a web page
+    Every element has a default display value like inline element or block element.
+    You can change this default behavior with the display property by making an inline element to a block element or vice versa.
+    The most common application is using display to change <li> element into inline for horizontal menus. Do this by making a <ul> and for li {display:inline;}
+    Elements can be hidden with display:none this will make it so that the element isn't there.
+    visibility:hidden also hides an element. However, the element will still take up space it's just you can't see it.
+*/
+
+/* CSS position property specifies the type of positioning method used for an element
+    There are five different position values: static, relative, fixed, absolute, sticky. HTML elements are positioned static by default. 
+    Static positioned elements are not affected by the top, bottom, left and right properties. They are positioned with the natural flow of the page
+    Relative positioned elements are positioned relative to its normal position. Setting the top, right, bottom, and left properites will cause it to be adjusted away from its normal position
+        -other content will not be adjusted to fit into any gap left by the element.
+    Fixed positioned elements are positioned relative to the viewport which means they will always stay at the same place even if scrolled. Element will never leave its gap.
+    Absolute positioned elements are positioned relative to the nearest positioned ancestor. If no ancestor then it uses the document body and moves along with page scrolling
+        -They are removed from the normal flow and can overlap elements
+    Sticky elements are positioned based on the user's scroll position. It toggles between relative and fixed.
+        -it is positioned relative until a given offset position is met in the viewport, then it sticks in place (like position:fixed)
+    
+*/
+
+/* CSS z-index property specifies the stack order of an element (which elements should be placed in front of or behind others). Z-index can be negative.
+    Z-index only works on positional elements and flex items (elements that are direct children of display:flex elements)
+    Ex: if you create an img with z-index: -1; Then the img will appear behind text since it has a negative index.
+    Elements with greater stack order is always above elements with a lower stack order
+    If two positioned elements overlap each other without a z-index specified, the element defined last in the HTML code will be shown on top.
+    
+*/
+body {
+    background-color: powderblue;
+    opacity: 0.8;
+    /* image background has many properties. To shorten the code you can use the shorthand property by calling just background. The syntax is:display: 
+        background: [color] [image] [repeat] [attachment] [position]
+        Eg: background: #ffffff url("img.png") no-repeat right top;
+    */
+    /* margins are used to create space around elements outside of any defined borders. You can also use margin shorthands
+        margin: [margin-top] [margin-right] [margin-bottom] [margin-left]
+        Eg: margin: 25px 50px 75px 100px; creates top margin 25px, right 50px, bottom 75px, left 100px
+        if only one value is specified then that is applied for all sides.
+        if only 3 are specified then the first num applies to the top, second applies to right and left, and third applies to bottom.
+        if only 2 are specified then the first applies to top and bottom, second applies to right and left
+        setting margin propert to auto horizontally centers the element within its container
+        Sometimes, two margins collapse into a single margin that is equal to the largest of the two margins. This only applies to top and bottom margins of elements
+    */
+    /*border is a border that goes around the padding and content. This property also has a shorthand
+        border: [border-width] [border-style] [border-color] 
+        Eg: border: 5px solid red;
+        You can use this shorthand to specify only one side
+        Eg: border-left: 6px solid red;
+    */
+    /*Padding property and shorthand works just like the margin one. It applies to space around an element's content, inside of any defined borders.*/
+    /* setting a property equal to inherit allows you to inherit the same property value as its parent element. */
+    /* CSS height/weigth property
+        auto: browser calculates the height and width
+        initial: sets the height/width to its default value
+        inherit: the height/width will be inherited from parent value
+        When browser window is smaller than the width of the elment, the browser will add a horizontal scrollbar.
+        To fix this use the max-width property which sets a maximum width possible improving browser handling of small windows
+        This can be used with margin:auto to center elements.
+    */
+    
+    /* CSS outline is a line that is drawn around elements, outside the borders to make make elements stand out
+        Unlike borders, the outline is drawn outside the element's border and may overlap with other content. Outline is not part of the elements dimension
+        Properties: 
+            outline-style
+            outline-color
+            outline-width
+            outline-offset
+            outline
+    */
+
+}
+
+h1 {
+    color:blue;
+    font-family: verdana;
+    font-size:300%
+}
+
+p {
+    color:red;
+    font-family: courier;
+    font-size: 160%;
+    margin:50px;
+}
+
+.city {
+    background-color: aliceblue;
+    color:rgb(192, 208, 44);
+    border:2px solid black;
+    margin: 20px;
+    padding:20px;
+}
+
+.main {
+    background-color: aqua;
+}

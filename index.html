@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <!--charset attribute specifies the character encoding for the HTML document. It is recommended to use UTF-8 as it covers almost all characters and symbols in the world-->
+    <meta charset="UTF-8">
+    <title>Page Title </title>
+
+    <!--link element links the file in href to the HTML and rel defines the relationship between the two-->
+    <!--href can be with a full URL or with a path relative to current web page (has / in the front)-->
+    <!--this css file is an example of external style sheet-->
+    <link rel="stylesheet" href="styles.css">
+    <!--inside style tag is an example of internal CSS-->
+    <!--whichever CSS style comes later will be the one applied as the style-->
+    <style> </style>    
+    <!--inline CSS is CSS inside an HTML element which has the highest priority and will override external and internal styles-->
+
+    <!--favicon is an image on the left side of the page title. Set it up with the link element-->
+    <link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png">
+
+    <!--<meta> element typically used to specify the character set, page description, keywords, author of document, and viewport settings-->
+    <!--metadata will not be displayed but is used by browser, by search engine, and other web services-->
+    <!--Below should be included in all web pages, it gives browser instructions on how to control the pages dimensions and scaling-->
+    <!--width=device-width sets the width of the page to follow the screen-width of the device. initial-scale=1.0 sets the initial zoom level when the page is first loaded by the browser-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<base> element specifies the base URL and/or target for all relative URLs in the page. There can only be one <base> element in a document. Must either have a href or target atrribute or both-->
+    <base href="https://example.com" target="_blank">
+
+    <!--To load a javascript in HTML use the <script> element and set the js file name as the src attribute-->
+
+</head>
+<body>
+    <h1 id = "H1">First heading</h1>
+    <h2>Second Heading</h2>
+    <h3>Third Heading</h3>
+    <p>This is a paragraph</p>
+
+    <!-- a for adding links. The URL is specified by the href attribute-->
+    <a href = "https://www.w3schools.com"> This is a link</a>
+    <!-- img adds an img based on the src attribute. The alt attribute displays text in case img is not found.-->
+    <!--it is recommended to use the style attribute and CSS width and height to set the dimensions as that cannot be overwritten-->
+    <img src = "w3schools.jpg" alt = "W3Schools.com" width = "104" height = "142">
+    <img src = "w3schools.jpg" alt = "W3Schools.com" style="width:128px;height: 128px;">
+    <!--you can access images in a sub foler by including the folder name in src attribute-->
+    <img src = "https://static.vecteezy.com/system/resources/thumbnails/003/171/355/small/objective-lens-icon-with-six-rainbow-colors-vector.jpg" alt = "icon" style="width:30px;height: 30px;">
+    <!--CSS float will let the image float to the right or left of a text. add into the style attribute-->
+    <!--mag tag defines an image map which can be used to map different areas of an image to do certain things-->
+    <!--create the img like normal but add a usemap attribute with the #mapname-->
+    <!--then create a map element including the attribute name with the same name as the #mapname-->
+    <!--inside here you can create a clickable area with the area tag and shape attribute: rect, circle, poly-polygon, default-entire region-->
+    <!--picture element allows you to define a container of image resources through source attribute and srcset attribute-->
+    <!--depending on which device you are on the browser will go through the pictures to select the first one that matches the attribute values namely the size-->
+    <!--always include a img element as the last child of the picture element so that browsers without support for picture or if no source tag match is found, it can default to this one-->
+    <!-- br element is for line break. No need for an end tag -->
+    <p> This is a <br> a paragraph with a line break. </p> 
+
+    <!-- demonstraing how web browser formats everything into one line-->
+    <p>
+        This paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    <p>
+        This paragraph
+        contains         a lot of spaces
+        in the source         code,
+        but the        browser
+        ignores it.
+    </p>
+
+    <!-- showing use of the hr element to create a horizontal line-->
+    <h1>This is heading 1  </h1>
+    <p>This is some text</p>
+    <hr>
+    <h2>This is heading 2</h2>
+    <p>This is some other text </p>
+    <hr>
+
+    <!-- demonstrating pre usage-->
+    <pre>
+        This is a poem
+        The format of this text will be kept the same
+        This is bc we are using pre 
+        pre stands to preformatted text 
+        text inside a pre is displayed in fixed-width font
+        and preserves space and line breaks
+    </pre>
+
+    <!-- using style and title attributes on elements with CSS property and values (inline CSS)-->
+    <p style = "color:red;"> This is a read paragraph</p>
+    <p title = "I am a tooltip"> This is a parapgrah</p>
+    <h1 style = "font-size: 60px;"> Heading 1</h1>
+    <h1 style="font-family: courier;">This is a formatted header</h1>
+    <h1 style="background-color: powderblue;"> This is a heading</h1>
+    <h1 style="border: 2px solid violet;">Hello World</h1>
+    <p style="background-color: tomato;">This is a paragraph</p>
+    <h1 style = "text-align: center;">Centered Heading</h1>
+
+    <!-- formatting elements-->
+    <p><b>Bolded Text with b element</b></p>
+    <p><strong>This text is marked as important with the strong element text will be bolded</strong></p>
+    <p><i>This text is italic with i element</i></p>
+    <p><em>This text is emphasized with em element text will be italized</em></p>
+    <p><small>This is some smaller text with small element</small></p>
+    <!--using mark which highlights the text-->
+    <p>Do not forget to but <mark>milk</mark> today.</p>
+    <!--using del to strike a line through deleted text-->
+    <p>My favorite color is <del>blue</del> red.</p>
+    <!--ins element defines text that has been inserted into the document. Will usually underline text -->
+    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+    <!--sub element defines subscript text-->
+    <p>This is <sub>subscripted</sub> text.</p>
+    <!--sup element defines superscript text-->
+    <p>This is <sup>superscripted</sup> text.</p>
+    
+    <!--blockquotes elements defines a section that is quoted from another source use cite attribute to link source. quote is usually indented-->
+    <p>Here is a quote from a website</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF 
+        works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver 
+        innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+    <p>Here we use the q tag for defining short quotes: <q>This is the quote</q></p>
+    <!--abbr tag is used marks abbreviated words. Use title attribute to allow description for abbreviation when you mouse hover-->
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    <p>Writing the address using the address element tag. Browser will always add a line break before and after address and the element usually renders as italic:</p>
+    <address>
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+    <p>Citing someones creative work with the cite tag. Usually renders in italic: <cite>The Scream</cite> by Edvard Munch.</p>
+    <!--BDO stands for bi directional override and the dir attribute specifies the direction-->
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <!--CSS is Cascading Style Sheets used to format the layout of a webpage. You can add it to HTML inline, internal, or externally-->
+    <!--inline can be done by using the style attribute inside HTML elements-->
+    <!--Internal is done using a style element in the head section-->
+    <!--External is done by using a link element to link an external CSS file. This is the most common practice-->
+
+    <!--target attribute specifies where to open linked documents-->
+    <!--_self: default opens in same window/tab as it was clicked-->
+    <!--_blank: opens document in new window or tab-->
+    <!--_parent: opens the document in the parent frame-->
+    <!--_top: opens document in the fullt body of the window-->
+    <p><a href="https://www.w3schools.com/" target="_blank">Visit W3Schools</a></p>
+
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>Relative URLs: links to page within the same website doesnt have a http part</h2>
+    <p><a href="html_images.asp">HTML Images</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+    <!--putting img tag inside the a tag allows you to use image as a link-->
+    <!--use mailto inside the href attribute of the a tag to creat a link that opens the users email program-->
+    <a href="mailto:someone@example.com">Send email</a>
+   
+    <!--Creating bookmarks will allow you to jump to certain areas in a long page-->
+    <!--done by giving a tag an unique id with the id attribute-->
+    <!--you can add a link to that bookmark with the a tag using the id name with a '#' preceding it as the href attribute value-->
+    <p><a href="#H1">Jump to Top Heading</a></p>
+    
+    <!--HTML Tables allow you to arrange data into rows and columns using the table tag-->
+    <!--Each table cell is defined by a <td> and </td> tag which stands for table data. Everything between these tags are the content of the table cell-->
+    <table>
+        <caption>List of Numbers</caption>
+        <tr>
+            <th>num1</td>
+            <th>num2</td>
+            <th>num3</th>
+        </tr>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+            <td>three</td>
+        </tr>
+        <tr>
+            <td>four</td>
+            <td>five</td>
+            <td>six</td>
+        </tr>
+    </table>
+    <!--tabel cells can contain all sorts of HTML elements: text, images, lists, links, other tables, etc-->
+    <!--each table row starts with a <tr> and ends with a </tr> tag which stands for table row-->
+    <!--you can have as many rows as you like just make sure number number of cells are consistent (columns)-->
+    <!--Use <th> tag if you want your cells to be table header cells. <th> elements are bold and centered by default, can be changed with CSS-->
+    <!--You can set table border properites with CSS border-->
+    <!--You can set table size with the style attribute to define width and height. Width is a percentage which is how wide the element will be compared to its parent element.-->
+    <!--If you want vertical table headers just define the first cell in each <tr> as a <th> element and the rest as a <td>-->
+    <!--default table headers are centered aligned, you can change that with CSS text-align property-->
+    <!--Header for multiple columns can be acheived with the colspan attribute, which equals a string int value representing the number of columns to span, on the <th> element-->
+    <!--Rowspan makes a header cell span over multiple rows which acts the same as a colspand-->
+    <!--Table padding is done with the CSS padding property giving it a px value. Padding is the space between the cell edge and cell content. It can be done is all direction like padding-bottom, etc-->
+    <!--Cell spacing is the space between each cell and can be changed with the CSS border-spacing property on the table element-->
+    <!--tr:nth-child(even) or tr:nth-child(odd) applies the style you want on either all odd or even rows of the table. Do tr with th for same on all columns.-->
+    <!--<colgroup> element allow you to group multiple cols together. define <colgroup> tag as a child of a table before all other table elements but after <caption>-->
+    <!--inside colgroup use <col> element with span attribute to define how many columns this rule will apply to and then use CSS style to apply the style-->
+    <!--doing span on the first 2 cols, then span again will apply the second span rule starting at the end of the first span. This applies even if nothing is done to the styling-->
+    
+    <!--<dl> tag defines a description list, the <dt> tag defines the term and the <dd> tag describes each term-->
+    <!--HTML unordered list-->
+    <!--start with a <ul> tag and each item starts with a <li> tag. Default: list items will be marked with bullets-->
+    <!--CSS list-style-type property can be used to define the style of the list item marker: disc(bullet which is default), circle(open circle), square, none-->
+    <ul style="list-style-type: circle;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <!--lists can be nested. The nested list will use a different item marker-->
+    <!--a list item can contain many things like another HTML element like images or links-->
+    <!--One popular way is to style lists horizontally to create a navigation menu where each list item is a link to another element-->
+    <!--to make horizontal use the CSS float:left on the <li> tags-->
+    
+    <!--HTML ordered list-->
+    <!--start with <ol> tag and the same process as unordered list. list items will be default marked by numbers-->
+    <!--use type attribute on the <ol> tag to define types of list item markers. type="1" uses numbers, "A": uppercase letters, "a": lowercase letters, "I": uppercase roman numbers, "i" lowercase roman numbers-->
+    <ol type = "I">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <!--ordered list can be nested. the nested list will start its own numbering from the beginning-->
+
+    <!--containers are elements to store other HTML elements that is often used to group sections of a web page together.-->
+    <!--<div> is a container that defines a section in a document that is block level meaning it starts at a new line. -->
+    <!--If you want to center align a div then use the CSS margin property and set it to auto-->
+    <!--To align multiple divs use the CSS float property-->
+    <!--<span> is a container that defines a section on a document that is inline-->
+
+    <!--HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class-->
+    <!--class attribute is often used to point to a class name in a style sheet. This allows you to style multiple divs using the .city style-->
+    <!--write a class with a period followed by the class name. Define CSS properties within curly braces-->
+    <!--HTML elements can belong to more than one class each class seperated by a space in the class attribute. Element will be styles according to all the classes specified in sequential order-->
+    <!--different elements can point to the same class name-->
+    <div class="city main">
+        <h2>London</h2>
+        <p>London is the capital of England</p>
+    </div>
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France</p>
+    </div>
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <!--the difference between id and class is that class name can be used by multiple HTML elements and id must only be used by one HTML element within the page-->
+
+    <!--An HTML iframe is used to display a web page within a web page. Use the <iframe> tag-->
+    <!--by default iframe has a border around it, you can remove it by using the border property and set it to none-->
+    <iframe src="url" style="height:200px;width:300px;" title="iframe_a"></iframe>
+    <!--iframe can be used as a target frame for a link. the target attribute of the link must refer to the same name attribute of the iframe-->
+    <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+    <!--now when the link is clicked it will open it within the iframe area-->
+
+    <!--Javascript makes a page more interactive. Use <script> tag to define a client side srcipt. <script> will either contain script statements or points to an external file through the src attribute-->
+    <!--HTML Layout Elements: HTML has several semantic elements that define the different parts of a web page-->
+    <!--<header>: defines a header for a document or a section(introductory content or set of navigational links)-->
+    <!--<nav>: defines set of navigation links(not all navigations links only the major ones)-->
+    <!--<section>: defines sections in the document.-->
+    <!--<article>: defines an independent, self-contained content. Goes well with section-->
+    <!--<aside>: defines content aside from the content (like a sidebar, should be indirectly related to the surrounding content). Good for ads-->
+    <!--<footer>: defines a footer for document or a section(authorship info, back to top links, copyright info, etc)-->
+    <!--<details>: defines additional details that the user can open and close on demand-->
+    <!--<summary>: defines a heading for the <details> element-->
+
+    <!--HTML forms is used to collect user input. <form> tag is used to create a HTML form which is a container for different types of input elements.
+        <input> element is the most used form element. <input> can be displayed in many ways, depending on the type attribute
+        <input type="text"> displays a single-line text input
+        radio: displays a radio button for selecting one of many choices
+        submit: submit button
+        You can give inputs a default value with a value attribute
+    -->
+    <input type="text" value="Enter something">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="submit">
+    <input type="button">
+    <input type="password">
+    <input type="date">
+    <input type="file">
+</body>
+</html>
